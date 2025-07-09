@@ -1,0 +1,34 @@
+{
+  "name": "be.technocite.diaporamaxr",
+  "displayName": "Diaporamaxr",
+  "version": "0.0.1",
+  "unity": "2018.1",
+  "unityRelease": "",
+  "description": "Allow to show assets of artists without code",
+  "keywords": [
+    "Script",
+    "Tool"
+  ],
+  "dependencies": {},
+  "relatedPackages": {},
+  "samples": [
+    {
+      "displayName": "Demo Scene",
+      "description": "Demo on how to use the package",
+      "path": "Scene/Demo"
+    }
+  ],
+  "author": {
+    "name": "",
+    "mail": "",
+    "url": ""
+  },
+  "repository": {
+    "type": "Git",
+    "url": "",
+    "footprint": "",
+    "revision": ""
+  },
+  "category": "Script",
+  "_fingerprint": ""
+}

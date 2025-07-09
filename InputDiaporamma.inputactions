@@ -1,0 +1,182 @@
+{
+    "name": "InputDiaporamma",
+    "maps": [
+        {
+            "name": "InputDiaporamma",
+            "id": "b27eafe1-6c1a-473e-9bad-6682fb8bc7a6",
+            "actions": [
+                {
+                    "name": "NextScene",
+                    "type": "Button",
+                    "id": "78c63184-1f68-493b-ad67-36216576ca8a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PreviousScene",
+                    "type": "Button",
+                    "id": "70fd1490-a52a-4b43-bd5f-dfe43ba4d748",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "NextDiapo",
+                    "type": "Button",
+                    "id": "ab7dc459-668c-4ed3-8d55-60c27feed0f4",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PreviousDiapo",
+                    "type": "Button",
+                    "id": "2d784305-bc1f-4b94-b216-37bc8bf079a3",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "e361eec0-c7d7-443b-ad32-ba23ecef07a0",
+                    "path": "<Keyboard>/numpad9",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "NextScene",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "de591e93-8cff-441a-a603-6cc3e40c87f0",
+                    "path": "<XRController>{RightHand}/{SecondaryAction}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "NextScene",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c1084f7b-e625-46be-9dac-19404dbf0ba9",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "NextScene",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "93de71d9-1c9a-4a4a-880d-6606c598a4e7",
+                    "path": "<Keyboard>/numpad7",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PreviousScene",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d19d36f0-9aaa-4fec-b7f1-d53e47ecb452",
+                    "path": "<XRController>{LeftHand}/{SecondaryAction}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PreviousScene",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "39d5712f-6243-43a8-b17e-fa256811d3c0",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PreviousScene",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1dac47e1-f9a7-4cc4-add6-90a680b5d24c",
+                    "path": "<Keyboard>/numpad6",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "NextDiapo",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ec4ae4cd-0027-49ef-bca7-3c136b831fed",
+                    "path": "<XRController>{RightHand}/{PrimaryAction}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "NextDiapo",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8a043566-42b2-46b4-8e6e-29b221afe427",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "NextDiapo",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "405414c8-ca5a-428c-9612-b1fde4ef5a68",
+                    "path": "<Keyboard>/numpad4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PreviousDiapo",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5fb19d32-a8c6-4d90-b2f4-13671e9a5fcb",
+                    "path": "<XRController>{LeftHand}/{PrimaryAction}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PreviousDiapo",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "41a851ae-c21b-4150-8447-4292368aacde",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PreviousDiapo",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
