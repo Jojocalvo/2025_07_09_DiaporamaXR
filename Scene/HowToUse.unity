@@ -341,10 +341,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Diapo Input
       objectReference: {fileID: 0}
-    - target: {fileID: 9217485358571337512, guid: ef309665649646b40874f1f887819210, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class DiapoMono_RemoveDefaultUnityCamera : MonoBehaviour
 {
+
     public string[] m_ignoreThoseCamera = new string[] {
         "RightEyeAnchor", "CenterEyeAnchor", "LeftEyeAnchor"
     };
