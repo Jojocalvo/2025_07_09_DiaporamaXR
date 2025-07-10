@@ -28,12 +28,13 @@ public class DiapoMono_MoveAtTransformByOnName : MonoBehaviour
         {
             m_whatToMove.position = targetObject.transform.position;
             m_whatToMove.rotation =targetObject. transform.rotation ;
+            Debug.Log("On a target");
         }
         else
         {
             m_whatToMove.position = Vector3.zero;
             m_whatToMove.rotation = Quaternion.identity ;
-
+            Debug.Log("ca a pas target");
         }
     }
 }
