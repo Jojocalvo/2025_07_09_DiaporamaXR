@@ -5,7 +5,7 @@ public class DiapoMono_MoveAtTransformByOnName : MonoBehaviour
 {
     public string m_nameToLookAround = "XR Start Point";
     public Transform m_whatToMove;
-    public bool m_useAtAwake = true;
+    public bool m_useAtOnEnable = true;
 
 
     private void Reset()
@@ -13,9 +13,9 @@ public class DiapoMono_MoveAtTransformByOnName : MonoBehaviour
         m_whatToMove = transform;
     }
 
-    private void Awake()
+    private void OnEnable()
     {
-        if (m_useAtAwake)
+        if (m_useAtOnEnable)
             MoveAtTarget();
     }
 
