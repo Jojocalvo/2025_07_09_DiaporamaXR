@@ -1,90 +1,98 @@
-using UnityEngine;
-using UnityEngine.SceneManagement;
-
-public class DiapoMono_ChangeScene : MonoBehaviour
+ï»¿namespace Technocite
 {
-    // Tableau des indices des scènes à ignorer
-    [Tooltip("Liste des indices des scènes à ignorer")]
-    public int[] scenesToIgnore = new int[]{0};
 
-    // Fonction pour vérifier si la scène doit être ignorée
-    private bool IsSceneIgnored(int sceneIndex)
+
+    using UnityEngine;
+    using UnityEngine.SceneManagement;
+
+    public class DiapoMono_ChangeScene : MonoBehaviour
     {
-        foreach (int ignoredScene in scenesToIgnore)
+        // Tableau des indices des scÃ¨nes Ã  ignorer
+        [Tooltip("Liste des indices des scÃ¨nes Ã  ignorer")]
+        public int[] scenesToIgnore = new int[] { 0 };
+
+        // Fonction pour vÃ©rifier si la scÃ¨ne doit Ãªtre ignorÃ©e
+        private bool IsSceneIgnored(int sceneIndex)
         {
-            if (sceneIndex == ignoredScene)
+            foreach (int ignoredScene in scenesToIgnore)
             {
-                return true; // Si la scène est dans le tableau à ignorer, retourner true
+                if (sceneIndex == ignoredScene)
+                {
+                    return true; // Si la scÃ¨ne est dans le tableau Ã  ignorer, retourner true
+                }
             }
-        }
-        return false; // Sinon, la scène n'est pas ignorée
-    }
-
-    [ContextMenu("Next Scene")]
-    public void NextScene()
-    {
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        int nextSceneIndex = currentSceneIndex + 1;
-
-        // Chercher la prochaine scène qui n'est pas dans le tableau des scènes à ignorer
-        while (IsSceneIgnored(nextSceneIndex) && nextSceneIndex < SceneManager.sceneCountInBuildSettings)
-        {
-            nextSceneIndex++;
+            return false; // Sinon, la scÃ¨ne n'est pas ignorÃ©e
         }
 
-        // Si on est arrivé à la dernière scène, on recommence depuis la première scène
-        if (nextSceneIndex >= SceneManager.sceneCountInBuildSettings)
+        [ContextMenu("Next Scene")]
+        public void NextScene()
         {
-            nextSceneIndex = 0;
+            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            int nextSceneIndex = currentSceneIndex + 1;
+
+            // Chercher la prochaine scÃ¨ne qui n'est pas dans le tableau des scÃ¨nes Ã  ignorer
             while (IsSceneIgnored(nextSceneIndex) && nextSceneIndex < SceneManager.sceneCountInBuildSettings)
             {
                 nextSceneIndex++;
             }
+
+            // Si on est arrivÃ© Ã  la derniÃ¨re scÃ¨ne, on recommence depuis la premiÃ¨re scÃ¨ne
+            if (nextSceneIndex >= SceneManager.sceneCountInBuildSettings)
+            {
+                nextSceneIndex = 0;
+                while (IsSceneIgnored(nextSceneIndex) && nextSceneIndex < SceneManager.sceneCountInBuildSettings)
+                {
+                    nextSceneIndex++;
+                }
+            }
+
+            // Si on trouve une scÃ¨ne valide, on la charge
+            if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
+            {
+                SceneManager.LoadScene(nextSceneIndex);
+                Debug.Log("Next Scene: " + SceneManager.GetSceneByBuildIndex(nextSceneIndex).name);
+            }
+            else
+            {
+                Debug.Log("Aucune scÃ¨ne suivante valide trouvÃ©e.");
+            }
         }
 
-        // Si on trouve une scène valide, on la charge
-        if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
+        [ContextMenu("Previous Scene")]
+        public void PreviousScene()
         {
-            SceneManager.LoadScene(nextSceneIndex);
-            Debug.Log("Next Scene: " + SceneManager.GetSceneByBuildIndex(nextSceneIndex).name);
-        }
-        else
-        {
-            Debug.Log("Aucune scène suivante valide trouvée.");
-        }
-    }
+            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            int previousSceneIndex = currentSceneIndex - 1;
 
-    [ContextMenu("Previous Scene")]
-    public void PreviousScene()
-    {
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        int previousSceneIndex = currentSceneIndex - 1;
-
-        // Chercher la scène précédente qui n'est pas dans le tableau des scènes à ignorer
-        while (IsSceneIgnored(previousSceneIndex) && previousSceneIndex >= 0)
-        {
-            previousSceneIndex--;
-        }
-
-        // Si on est arrivé à la première scène, on recommence depuis la dernière scène
-        if (previousSceneIndex < 0)
-        {
-            previousSceneIndex = SceneManager.sceneCountInBuildSettings - 1;
+            // Chercher la scÃ¨ne prÃ©cÃ©dente qui n'est pas dans le tableau des scÃ¨nes Ã  ignorer
             while (IsSceneIgnored(previousSceneIndex) && previousSceneIndex >= 0)
             {
                 previousSceneIndex--;
             }
-        }
 
-        // Si on trouve une scène valide, on la charge
-        if (previousSceneIndex >= 0)
-        {
-            SceneManager.LoadScene(previousSceneIndex);
-            Debug.Log("Previous Scene: " + SceneManager.GetSceneByBuildIndex(previousSceneIndex).name);
-        }
-        else
-        {
-            Debug.Log("Aucune scène précédente valide trouvée.");
+            // Si on est arrivÃ© Ã  la premiÃ¨re scÃ¨ne, on recommence depuis la derniÃ¨re scÃ¨ne
+            if (previousSceneIndex < 0)
+            {
+                previousSceneIndex = SceneManager.sceneCountInBuildSettings - 1;
+                while (IsSceneIgnored(previousSceneIndex) && previousSceneIndex >= 0)
+                {
+                    previousSceneIndex--;
+                }
+            }
+
+            // Si on trouve une scÃ¨ne valide, on la charge
+            if (previousSceneIndex >= 0)
+            {
+                SceneManager.LoadScene(previousSceneIndex);
+                Debug.Log("Previous Scene: " + SceneManager.GetSceneByBuildIndex(previousSceneIndex).name);
+            }
+            else
+            {
+                Debug.Log("Aucune scÃ¨ne prÃ©cÃ©dente valide trouvÃ©e.");
+            }
         }
     }
+
+
+
 }

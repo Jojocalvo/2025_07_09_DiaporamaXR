@@ -1,9 +1,9 @@
-﻿
-﻿using UnityEngine;
-using UnityEngine.Events;
+﻿using UnityEngine.Events;
 using UnityEngine.InputSystem;
 namespace Technocite
 {
+
+    using UnityEngine;
 
     public class DiapoMono_InputButton : MonoBehaviour
     {
