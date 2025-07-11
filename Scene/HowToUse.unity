@@ -119,6 +119,115 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &270327533
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 270327534}
+  - component: {fileID: 270327535}
+  m_Layer: 0
+  m_Name: Load Scene By Id
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &270327534
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270327533}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 932974319}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &270327535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270327533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f8677ccfa77a6142b842d9ade159813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_idsToSceneId:
+    m_scenes:
+    - m_sceneTitle: Title. Eleve 1
+      m_sceneId: 2
+      m_nameId:
+      - LASTNAME_FIRSTNAME_1
+      m_integerId: 411f0000
+    - m_sceneTitle: Title. Eleve 2
+      m_sceneId: 3
+      m_nameId:
+      - LASTNAME_FIRSTNAME_2
+      m_integerId: 421f0000
+    - m_sceneTitle: Title. Eleve 3
+      m_sceneId: 4
+      m_nameId:
+      - LASTNAME_FIRSTNAME_3
+      m_integerId: 431f0000
+    - m_sceneTitle: Title. Eleve 4
+      m_sceneId: 5
+      m_nameId:
+      - LASTNAME_FIRSTNAME_4
+      m_integerId: 441f0000
+    - m_sceneTitle: Title. Eleve 5
+      m_sceneId: 6
+      m_nameId:
+      - LASTNAME_FIRSTNAME_5
+      m_integerId: 451f0000
+    - m_sceneTitle: Title. Eleve 6
+      m_sceneId: 7
+      m_nameId:
+      - LASTNAME_FIRSTNAME_6
+      m_integerId: 461f0000
+    - m_sceneTitle: Title. Eleve 7
+      m_sceneId: 8
+      m_nameId:
+      - LASTNAME_FIRSTNAME_7
+      m_integerId: 471f0000
+    - m_sceneTitle: Title. Eleve 8
+      m_sceneId: 9
+      m_nameId:
+      - LASTNAME_FIRSTNAME_8
+      m_integerId: 481f0000
+    - m_sceneTitle: Title. Eleve 9
+      m_sceneId: 10
+      m_nameId:
+      - LASTNAME_FIRSTNAME_9
+      m_integerId: 491f0000
+    - m_sceneTitle: Title. Eleve 10
+      m_sceneId: 11
+      m_nameId:
+      - LASTNAME_FIRSTNAME_10
+      m_integerId: 4a1f0000
+    - m_sceneTitle: Title. Eleve 11
+      m_sceneId: 12
+      m_nameId:
+      - LASTNAME_FIRSTNAME_11
+      m_integerId: 4b1f0000
+    - m_sceneTitle: Title. Eleve 12
+      m_sceneId: 13
+      m_nameId:
+      - LASTNAME_FIRSTNAME_12
+      m_integerId: 4c1f0000
+  m_onSceneIdChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,6 +535,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &932974319 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6705556520661338639, guid: ef309665649646b40874f1f887819210, type: 3}
+  m_PrefabInstance: {fileID: 3217392346597292017}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1537834823
 GameObject:
   m_ObjectHideFlags: 0
@@ -858,7 +972,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6705556520661338639, guid: ef309665649646b40874f1f887819210, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 270327534}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef309665649646b40874f1f887819210, type: 3}
 --- !u!1660057539 &9223372036854775807
