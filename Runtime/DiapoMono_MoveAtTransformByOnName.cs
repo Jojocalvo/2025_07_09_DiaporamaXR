@@ -19,7 +19,8 @@ public class DiapoMono_MoveAtTransformByOnName : MonoBehaviour
             MoveAtTarget();
     }
 
-    private void MoveAtTarget()
+    [ContextMenu("Move At Target")]
+    public void MoveAtTarget()
     {
         // Look around for the object by name
         GameObject targetObject = GameObject.Find(m_nameToLookAround);
