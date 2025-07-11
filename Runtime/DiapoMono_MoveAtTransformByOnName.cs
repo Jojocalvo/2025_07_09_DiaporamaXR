@@ -33,8 +33,8 @@ public class DiapoMono_MoveAtTransformByOnName : MonoBehaviour
         else
         {
             m_whatToMove.position = Vector3.zero;
-            m_whatToMove.rotation = Quaternion.identity ;
-            Debug.Log("ca a pas target");
+            m_whatToMove.rotation = Quaternion.identity;
+            Debug.Log("ça a pas target");
         }
     }
 }

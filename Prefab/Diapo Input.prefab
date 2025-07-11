@@ -55,6 +55,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4814819720338781727}
   - component: {fileID: 4078144609047168049}
+  - component: {fileID: 8376394797727060790}
   m_Layer: 0
   m_Name: Previous Diapo
   m_TagString: Untagged
@@ -95,11 +96,35 @@ MonoBehaviour:
       m_Calls: []
   m_onDown:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8376394797727060790}
+        m_TargetAssemblyTypeName: DiapoMono_DiapoInScenePusher, be.technocite.diaporama.Runtime
+        m_MethodName: PreviousDiapo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_onUp:
     m_PersistentCalls:
       m_Calls: []
   m_isPressed: 0
+--- !u!114 &8376394797727060790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892979670552564611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0ed84b90fc2580479f953c386362fb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4129707192110370835
 GameObject:
   m_ObjectHideFlags: 0
@@ -111,7 +136,7 @@ GameObject:
   - component: {fileID: 8802762161126391360}
   - component: {fileID: 3201470391474104333}
   - component: {fileID: 6173582109627059955}
-  - component: {fileID: 1161125731497839804}
+  - component: {fileID: 1720866335674481448}
   m_Layer: 0
   m_Name: Remove Unity Camera
   m_TagString: Untagged
@@ -174,8 +199,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1161125731497839804}
-        m_TargetAssemblyTypeName: DiapoMono_CreatePrefabInScene, be.technocite.diaporama.Runtime
+      - m_Target: {fileID: 1720866335674481448}
+        m_TargetAssemblyTypeName: DiapoMono_CreatePrefabAfterDeletePreviousInScene,
+          be.technocite.diaporama.Runtime
         m_MethodName: CreatePrefab
         m_Mode: 1
         m_Arguments:
@@ -188,7 +214,7 @@ MonoBehaviour:
         m_CallState: 2
   m_lastSceneLoadedIndex: 0
   m_lastSceneLoadedName: 
---- !u!114 &1161125731497839804
+--- !u!114 &1720866335674481448
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -197,11 +223,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 4129707192110370835}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3380444b6c15272419cfe8315533617d, type: 3}
+  m_Script: {fileID: 11500000, guid: 67fb596a1f7e724469dfa8d9be398aea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_prefab: {fileID: 933213997675181613, guid: c399307e04175094882777d333482f14, type: 3}
   m_setItToZero: 1
+  m_created: {fileID: 0}
 --- !u!1 &4244274686815124340
 GameObject:
   m_ObjectHideFlags: 0
@@ -279,6 +306,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3638061410055316218}
   - component: {fileID: 2851450517549317781}
+  - component: {fileID: 2179158768167049342}
   m_Layer: 0
   m_Name: Next Diapo
   m_TagString: Untagged
@@ -319,11 +347,35 @@ MonoBehaviour:
       m_Calls: []
   m_onDown:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2179158768167049342}
+        m_TargetAssemblyTypeName: DiapoMono_DiapoInScenePusher, be.technocite.diaporama.Runtime
+        m_MethodName: NextDiapo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_onUp:
     m_PersistentCalls:
       m_Calls: []
   m_isPressed: 0
+--- !u!114 &2179158768167049342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4721165487301022864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0ed84b90fc2580479f953c386362fb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4985685791683013543
 GameObject:
   m_ObjectHideFlags: 0
